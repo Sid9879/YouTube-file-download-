@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: authorized-audio-to-mp3
+    runtime: docker
+    plan: starter
+    healthCheckPath: /health
+    envVars:
+      - key: MAX_DURATION_SECONDS
+        value: "7200"
+      - key: MAX_FILE_MB
+        value: "300"
